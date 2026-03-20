@@ -310,15 +310,18 @@ footer a {
   .job-header { flex-direction: column; }
 
   /* МЕТРИКИ — 4 в ряд на мобиле */
-  .metrics {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+ .metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
   }
 
-  .metric {
-    aspect-ratio: 1;
-    padding: 4px;
-  }
+.metric {
+  width: calc(25% - 5px);
+  aspect-ratio: 1;
+  padding: 4px;
+}
 
   .num { font-size: 0.9rem; }
   .label { font-size: 0.52rem; }
