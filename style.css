@@ -14,7 +14,44 @@ body {
 a { color: #a78bfa; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ─── HEADER ─── */
+/* LANG SWITCHER */
+.lang-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 6px;
+  z-index: 9999;
+}
+
+.lang-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #30363d;
+  background: #161b22;
+  color: #8b949e;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lang-btn:hover {
+  border-color: #7c3aed;
+  color: #a78bfa;
+}
+
+.lang-btn.active {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(124,58,237,0.45);
+}
+
+/* HEADER */
 header {
   display: flex;
   gap: 28px;
@@ -24,55 +61,16 @@ header {
   border-bottom: 1px solid #21262d;
 }
 
-/* ─── AVATAR + FLAGS ─── */
-.avatar-wrap {
-  position: relative;
-  flex-shrink: 0;
-  width: 130px;
-}
-
 .avatar {
   width: 130px;
   height: 130px;
   border-radius: 16px;
   object-fit: cover;
   object-position: center top;
+  flex-shrink: 0;
   border: 2px solid #30363d;
-  display: block;
 }
 
-/* Флаги — десктоп: под аватаром по центру */
-.lang-flags {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.flag-btn {
-  background: #161b22;
-  border: 2px solid #30363d;
-  border-radius: 8px;
-  font-size: 1.45rem;
-  cursor: pointer;
-  padding: 4px 6px;
-  line-height: 1;
-  transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.flag-btn:hover {
-  border-color: #7c3aed;
-  transform: scale(1.1);
-}
-
-.flag-btn.active {
-  border-color: #7c3aed;
-  box-shadow: 0 0 10px rgba(124,58,237,0.5);
-  transform: scale(1.08);
-}
-
-/* ─── HEADER INFO ─── */
 .header-info {
   flex: 1;
   display: flex;
@@ -111,7 +109,7 @@ h1 {
   font-weight: 500;
 }
 
-/* ─── CONTACTS ─── */
+/* CONTACTS */
 .contacts {
   display: flex;
   gap: 16px;
@@ -145,7 +143,7 @@ h1 {
 
 .contacts a:hover { color: #a78bfa; }
 
-/* ─── SECTIONS ─── */
+/* SECTIONS */
 section { margin-bottom: 40px; }
 
 h2 {
@@ -159,7 +157,7 @@ h2 {
   border-bottom: 1px solid #21262d;
 }
 
-/* ─── TAGS ─── */
+/* TAGS */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -178,12 +176,9 @@ h2 {
   transition: border-color 0.2s, color 0.2s;
 }
 
-.tags span:hover {
-  border-color: #7c3aed;
-  color: #a78bfa;
-}
+.tags span:hover { border-color: #7c3aed; color: #a78bfa; }
 
-/* ─── METRICS ─── */
+/* METRICS */
 .metrics {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -219,7 +214,7 @@ h2 {
   line-height: 1.3;
 }
 
-/* ─── JOBS ─── */
+/* JOBS */
 .job {
   background: #161b22;
   border: 1px solid #21262d;
@@ -280,7 +275,7 @@ h2 {
   border-radius: 6px;
 }
 
-/* ─── SKILLS ─── */
+/* SKILLS */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -312,12 +307,8 @@ h2 {
   line-height: 1.6;
 }
 
-/* ─── EDUCATION ─── */
-.edu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+/* EDUCATION */
+.edu-list { display: flex; flex-direction: column; gap: 10px; }
 
 .edu {
   display: flex;
@@ -336,12 +327,9 @@ h2 {
   min-width: 36px;
 }
 
-.edu-text {
-  font-size: 0.85rem;
-  color: #c9d1d9;
-}
+.edu-text { font-size: 0.85rem; color: #c9d1d9; }
 
-/* ─── FOOTER ─── */
+/* FOOTER */
 footer {
   margin-top: 48px;
   padding-top: 20px;
@@ -351,20 +339,11 @@ footer {
   color: #6e7681;
 }
 
-/* ─── MOBILE ─── */
+/* MOBILE */
 @media (max-width: 600px) {
   body { padding: 20px 14px; }
 
-  header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  /* На мобиле аватар на всю ширину, флаги поверх в правом углу */
-  .avatar-wrap {
-    width: 100%;
-    position: relative;
-  }
+  header { flex-direction: column; }
 
   .avatar {
     width: 100%;
@@ -372,37 +351,7 @@ footer {
     border-radius: 14px;
   }
 
-  .lang-flags {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    margin-top: 0;
-    flex-direction: row;
-    gap: 6px;
-    background: rgba(13,17,23,0.65);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 5px 8px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .flag-btn {
-    font-size: 1.6rem;
-    padding: 2px 4px;
-    background: transparent;
-    border-color: transparent;
-  }
-
-  .flag-btn.active {
-    border-color: #7c3aed;
-    background: rgba(124,58,237,0.15);
-    box-shadow: 0 0 8px rgba(124,58,237,0.4);
-  }
-
   h1 { font-size: 1.45rem; }
-
-  .header-top { flex-wrap: wrap; }
 
   .job-header { flex-direction: column; gap: 8px; }
 
@@ -416,4 +365,6 @@ footer {
   .label { font-size: 0.58rem; }
 
   .skills-grid { grid-template-columns: 1fr; }
+
+  .lang-btn { font-size: 0.75rem; padding: 6px 12px; }
 }
