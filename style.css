@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0f;
+  color: #c9d1d9;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid #21262d;
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.badge {
+  background: #1a1a2e;
+  border: 1px solid #7c3aed;
+  color: #a78bfa;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.subtitle {
+  color: #8b949e;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.contacts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contacts a {
+  color: #a78bfa;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 52px;
+}
+
+h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #a78bfa;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #21262d;
+}
+
+p {
+  color: #8b949e;
+  font-size: 0.95rem;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tags span {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+/* METRICS */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.metric {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.metric:hover {
+  border-color: #7c3aed;
+}
+
+.num {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #a78bfa;
+  line-height: 1.2;
+}
+
+.label {
+  display: block;
+  font-size: 0.78rem;
+  color: #8b949e;
+  margin-top: 6px;
+}
+
+/* JOBS */
+.job {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.job:hover {
+  border-color: #7c3aed;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.job h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.company {
+  font-size: 0.85rem;
+  color: #8b949e;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #a78bfa;
+  white-space: nowrap;
+  background: #1a1a2e;
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid #7c3aed33;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.results span {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.skill-block {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.skill-block h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a78bfa;
+  margin-bottom: 8px;
+}
+
+.skill-block p {
+  font-size: 0.82rem;
+  color: #8b949e;
+}
+
+/* EDUCATION */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edu {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.year {
+  font-size: 0.82rem;
+  color: #a78bfa;
+  min-width: 36px;
+  font-weight: 600;
+}
+
+.edu span:last-child {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #21262d;
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #8b949e;
+}
+
+footer a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body { padding: 32px 16px; }
+  h1 { font-size: 1.8rem; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .job-header { flex-direction: column; }
+}
