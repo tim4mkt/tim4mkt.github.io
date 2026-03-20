@@ -9,11 +9,18 @@
 </head>
 <body>
 
+  <!-- LANG TOGGLE -->
   <div class="lang-switcher">
-    <button class="lang-btn active" onclick="setLang('ru')">RU</button>
-    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <div class="lang-toggle" id="langToggle" onclick="toggleLang()">
+      <div class="lang-track">
+        <span class="lang-option active" id="opt-ru">RU</span>
+        <span class="lang-option" id="opt-en">EN</span>
+      </div>
+      <div class="lang-thumb" id="langThumb"></div>
+    </div>
   </div>
 
+  <!-- HEADER -->
   <header>
     <img src="photo.jpg" alt="Timur Pokaenkov" class="avatar">
     <div class="header-info">
@@ -39,6 +46,7 @@
     </div>
   </header>
 
+  <!-- О СЕБЕ -->
   <section id="about">
     <h2 id="about-title">О себе</h2>
     <p id="about-text">Визионер в сфере цифрового маркетинга с 12-летним опытом в разработке продуктов и управлении. Запускал и масштабировал продукты в Web3, крипто и онлайн-гейминге на рынках первого и второго уровня. Строил команды и партнёрства с нуля, используя искусственный интеллект как инструмент ускорения.</p>
@@ -54,6 +62,7 @@
     </div>
   </section>
 
+  <!-- МЕТРИКИ -->
   <section id="metrics">
     <h2 id="metrics-title">Ключевые результаты</h2>
     <div class="metrics">
@@ -70,6 +79,7 @@
     </div>
   </section>
 
+  <!-- ОПЫТ -->
   <section id="experience">
     <h2 id="experience-title">Опыт</h2>
 
@@ -145,21 +155,22 @@
         <span>1500+ единиц мерча</span>
       </div>
     </div>
-
   </section>
 
+  <!-- НАВЫКИ -->
   <section>
     <h2 id="skills-title">Навыки</h2>
     <div class="skills-grid">
       <div class="skill-block"><h4>Стратегия и управление</h4><p>Стратегия выхода на рынок · Управление брендом · B2B и B2C · Решения на основе данных · Кризисное управление</p></div>
       <div class="skill-block"><h4>Рост и результаты</h4><p>Рост и удержание аудитории · Платная и органическая реклама · SEO/ASO · Аналитика воронок · A/B-тестирование</p></div>
-      <div class="skill-block"><h4>PR и медиа</h4><p>Стратегия PR · Работа со СМИ · Нетворкинг с топ-менеджментом · Работа с инфлюенсерами</p></div>
+      <div class="skill-block"><h4>PR и медиа</h4><p>Стратегия PR · Работа со СМИ · Нетворкинг с топ-менеджментом · Работа с лидерами мнений</p></div>
       <div class="skill-block"><h4>Контент и видео</h4><p>Полный цикл видеопроизводства · Короткий и длинный форматы · 3D-анимация · Моушн-дизайн</p></div>
       <div class="skill-block"><h4>ИИ и операционка</h4><p>Контент на базе ИИ · Исследования с помощью ИИ · Автоматизация маркетинга · Выстраивание процессов</p></div>
       <div class="skill-block"><h4>Команда и партнёры</h4><p>Построение команды · Кросс-функциональное взаимодействие · Стратегические партнёрства · Управление подрядчиками</p></div>
     </div>
   </section>
 
+  <!-- ОБРАЗОВАНИЕ -->
   <section>
     <h2 id="education-title">Образование</h2>
     <div class="edu-list">
@@ -170,6 +181,7 @@
     </div>
   </section>
 
+  <!-- ЯЗЫКИ -->
   <section>
     <h2 id="languages-title">Языки</h2>
     <div class="tags" id="languages-list">
