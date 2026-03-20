@@ -271,3 +271,18 @@ footer a {
   .metrics { grid-template-columns: repeat(2, 1fr); }
   .job-header { flex-direction: column; }
 }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-info {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+}
+
