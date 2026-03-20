@@ -358,11 +358,14 @@ footer {
   .job-header { flex-direction: column; gap: 8px; }
 
   .metrics {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-  }
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
 
-  .metric { padding: 10px 6px; }
+.metric:nth-child(9) {
+  grid-column-start: 2;
+}
+
   .num { font-size: 1rem; }
   .label { font-size: 0.58rem; }
 
