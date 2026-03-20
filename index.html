@@ -9,20 +9,16 @@
 </head>
 <body>
 
-  <!-- LANG TOGGLE -->
-  <div class="lang-switcher">
-    <div class="lang-toggle" id="langToggle" onclick="toggleLang()">
-      <div class="lang-track">
-        <span class="lang-option active" id="opt-ru">RU</span>
-        <span class="lang-option" id="opt-en">EN</span>
-      </div>
-      <div class="lang-thumb" id="langThumb"></div>
-    </div>
-  </div>
-
   <!-- HEADER -->
   <header>
-    <img src="photo.jpg" alt="Timur Pokaenkov" class="avatar">
+    <div class="avatar-wrap">
+      <img src="photo.jpg" alt="Timur Pokaenkov" class="avatar">
+      <!-- Флаги поверх аватара (мобиль) и рядом (десктоп) -->
+      <div class="lang-flags">
+        <button class="flag-btn active" id="flag-ru" onclick="setLang('ru')" title="Русский">🇷🇺</button>
+        <button class="flag-btn" id="flag-en" onclick="setLang('en')" title="English">🇬🇧</button>
+      </div>
+    </div>
     <div class="header-info">
       <div class="header-top">
         <h1>Timur Pokaenkov</h1>
