@@ -297,6 +297,10 @@ footer a {
   .avatar { width: 100%; height: 200px; }
 }
 
-section + section {
-  margin-top: 40px;
+#about {
+  margin-top: 16px;
+}
+
+#experience {
+  margin-top: 48px;
 }
