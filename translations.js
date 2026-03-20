@@ -44,7 +44,7 @@ const translations = {
     ],
     lang_title: "Языки",
     languages: ["Русский — Родной","Белорусский — Родной","Английский — B2","Итальянский — Разговорный"],
-    footer: "tim4mkt.github.io · ex3all@gmail.com · @Cpa_tim"
+    footer: "tim4mkt.github.io · ex3all@gmail.com · @cpa_tim"
   },
 
   en: {
@@ -92,7 +92,7 @@ const translations = {
     ],
     lang_title: "Languages",
     languages: ["Russian — Native","Belarusian — Native","English — B2","Italian — Conversational"],
-    footer: "tim4mkt.github.io · ex3all@gmail.com · @Cpa_tim"
+    footer: "tim4mkt.github.io · ex3all@gmail.com · @cpa_tim"
   }
 };
 
