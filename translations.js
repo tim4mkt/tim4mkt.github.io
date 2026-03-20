@@ -148,8 +148,9 @@ const translations = {
 
 function setLang(lang) {
   const t = translations[lang];
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+
+  document.getElementById('flag-ru').classList.toggle('active', lang === 'ru');
+  document.getElementById('flag-en').classList.toggle('active', lang === 'en');
 
   document.getElementById('badge').textContent = t.badge;
   document.getElementById('subtitle').textContent = t.subtitle;
@@ -161,6 +162,31 @@ function setLang(lang) {
   document.getElementById('education-title').textContent = t.education_title;
   document.getElementById('languages-title').textContent = t.languages_title;
   document.getElementById('footer-text').textContent = t.footer;
+
+  document.querySelectorAll('#tags-list span').forEach((el, i) => { if(t.tags[i]) el.textContent = t.tags[i]; });
+  document.querySelectorAll('.metric').forEach((el, i) => { if(t.metrics[i]) el.querySelector('.label').textContent = t.metrics[i].label; });
+
+  document.querySelectorAll('.job').forEach((el, i) => {
+    if(!t.jobs[i]) return;
+    el.querySelector('h3').textContent = t.jobs[i].title;
+    el.querySelector('.company').textContent = t.jobs[i].company;
+    el.querySelector('.date').textContent = t.jobs[i].date;
+    el.querySelectorAll('.results span').forEach((r, j) => { if(t.jobs[i].results[j]) r.textContent = t.jobs[i].results[j]; });
+  });
+
+  document.querySelectorAll('.skill-block').forEach((el, i) => {
+    if(!t.skills[i]) return;
+    el.querySelector('h4').textContent = t.skills[i].title;
+    el.querySelector('p').textContent = t.skills[i].text;
+  });
+
+  document.querySelectorAll('.edu').forEach((el, i) => {
+    if(t.education[i]) el.querySelector('.edu-text').textContent = t.education[i].text;
+  });
+
+  document.querySelectorAll('#languages-list span').forEach((el, i) => { if(t.languages[i]) el.textContent = t.languages[i]; });
+}
+
 
   // Tags
   const tagsEl = document.querySelectorAll('#tags-list span');
