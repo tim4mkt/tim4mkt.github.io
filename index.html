@@ -9,59 +9,81 @@
 </head>
 <body>
 
-<header>
-  <img src="photo.jpg" alt="Timur Pokaenkov" class="avatar">
-  <div class="header-info">
-    <div class="header-top">
-      <h1>Timur Pokaenkov</h1>
-      <span class="badge">CMO · 12 лет опыта</span>
-    </div>
-    <p class="subtitle">Digital Marketing · Web3 · iGaming · Crypto · Mobile Apps</p>
-    <div class="contacts">
-      <a href="mailto:ex3all@gmail.com">ex3all@gmail.com</a>
-      <a href="https://t.me/Cpa_tim">Tg: @Cpa_tim</a>
-      <a href="https://linkedin.com/in/timur-pokayonkov">LinkedIn</a>
-    </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
   </div>
-</header>
+
+  <header>
+    <img src="photo.jpg" alt="Timur Pokaenkov" class="avatar">
+    <div class="header-info">
+      <div class="header-top">
+        <h1>Timur Pokaenkov</h1>
+        <span class="badge" id="badge">Директор по маркетингу · 12 лет</span>
+      </div>
+      <p class="subtitle" id="subtitle">Цифровой маркетинг · Web3 · iGaming · Крипто · Мобильные приложения</p>
+      <div class="contacts">
+        <span class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:ex3all@gmail.com">ex3all@gmail.com</a>
+        </span>
+        <span class="contact-item">
+          <span class="contact-label">Telegram</span>
+          <a href="https://t.me/Cpa_tim">@Cpa_tim</a>
+        </span>
+        <span class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/timur-pokayonkov">timur-pokayonkov</a>
+        </span>
+      </div>
+    </div>
+  </header>
 
   <section id="about">
-    <h2>О себе</h2>
-    <p>Визионер в сфере digital-маркетинга с 12-летним опытом в digital, product-разработке и менеджменте. Запускал и масштабировал Web3, crypto и iGaming-продукты на рынках Tier-1 и Tier-2. Строил команды и партнёрства с нуля, используя AI как инструмент ускорения.</p>
-    <div class="tags">
-      <span>iGaming</span><span>Web3</span><span>Crypto</span><span>Mobile Apps</span>
-      <span>Affiliate</span><span>Fintech</span><span>AI-driven Marketing</span><span>Event Marketing</span>
+    <h2 id="about-title">О себе</h2>
+    <p id="about-text">Визионер в сфере цифрового маркетинга с 12-летним опытом в разработке продуктов и управлении. Запускал и масштабировал продукты в Web3, крипто и онлайн-гейминге на рынках первого и второго уровня. Строил команды и партнёрства с нуля, используя искусственный интеллект как инструмент ускорения.</p>
+    <div class="tags" id="tags-list">
+      <span>Онлайн-гейминг</span>
+      <span>Web3</span>
+      <span>Крипто</span>
+      <span>Мобильные приложения</span>
+      <span>Партнёрский маркетинг</span>
+      <span>Финтех</span>
+      <span>Маркетинг на базе ИИ</span>
+      <span>Ивент-маркетинг</span>
     </div>
   </section>
-<section id="metrics">  
-  <div class="metrics">
-  <div class="metric"><span class="num">55K</span><span class="label">MAU за 1.5 мес</span></div>
-  <div class="metric"><span class="num">×2</span><span class="label">Прибыль компании</span></div>
-  <div class="metric"><span class="num">$200K</span><span class="label">Выручка/мес Token Bot</span></div>
-  <div class="metric"><span class="num">1M+</span><span class="label">Установок приложения</span></div>
-  <div class="metric"><span class="num">5M+</span><span class="label">Установок (Self Publisher)</span></div>
-  <div class="metric"><span class="num">10+</span><span class="label">Проектов выведено на рынок</span></div>
-  <div class="metric"><span class="num">5–7K</span><span class="label">Стабильный DAU</span></div>
-  <div class="metric"><span class="num">+12%</span><span class="label">Retention Rate iGaming</span></div>
-  <div class="metric"><span class="num">15–25%</span><span class="label">MoM рост аудитории</span></div>
-  <div class="metric"><span class="num">300+</span><span class="label">Приложений как паблишер</span></div>
-</div>
-</section>
+
+  <section id="metrics">
+    <h2 id="metrics-title">Ключевые результаты</h2>
+    <div class="metrics">
+      <div class="metric"><span class="num">55K</span><span class="label">MAU за 1.5 мес</span></div>
+      <div class="metric"><span class="num">×2</span><span class="label">Прибыль компании</span></div>
+      <div class="metric"><span class="num">$200K</span><span class="label">Выручка/мес</span></div>
+      <div class="metric"><span class="num">1M+</span><span class="label">Установок приложения</span></div>
+      <div class="metric"><span class="num">5M+</span><span class="label">Установок (издатель)</span></div>
+      <div class="metric"><span class="num">10+</span><span class="label">Проектов на рынок</span></div>
+      <div class="metric"><span class="num">5–7K</span><span class="label">Ежедневная аудитория</span></div>
+      <div class="metric"><span class="num">+12%</span><span class="label">Удержание аудитории</span></div>
+      <div class="metric"><span class="num">15–25%</span><span class="label">Рост аудитории/мес</span></div>
+      <div class="metric"><span class="num">300+</span><span class="label">Приложений как издатель</span></div>
+    </div>
+  </section>
 
   <section id="experience">
-    <h2>Опыт</h2>
+    <h2 id="experience-title">Опыт</h2>
 
     <div class="job">
       <div class="job-header">
         <div>
-          <h3>Head of Marketing / Growth & Retention Lead</h3>
-          <p class="company">NDA — Telegram Mini App (Web3 / iGaming / Crypto)</p>
+          <h3>Руководитель маркетинга / Рост и удержание аудитории</h3>
+          <p class="company">NDA — Telegram Mini App (Web3 / Онлайн-гейминг / Крипто)</p>
         </div>
         <span class="date">08/2025 — н.в.</span>
       </div>
       <div class="results">
         <span>1K → 55K MAU за 1.5 мес</span>
-        <span>5–7K DAU</span>
+        <span>5–7K ежедневной аудитории</span>
         <span>Маркетинг как самостоятельная система</span>
       </div>
     </div>
@@ -69,42 +91,42 @@
     <div class="job">
       <div class="job-header">
         <div>
-          <h3>CMO</h3>
-          <p class="company">NDA — iGaming + Token on TON, Кипр · 100+ сотрудников</p>
+          <h3>Директор по маркетингу</h3>
+          <p class="company">NDA — Онлайн-гейминг + Токен на TON, Кипр · 100+ сотрудников</p>
         </div>
         <span class="date">NDA</span>
       </div>
       <div class="results">
         <span>Прибыль ×2</span>
-        <span>$80K → $200K/мес Token Bot</span>
-        <span>DAU 50K · MAU 400K · база 3M+</span>
+        <span>$80K → $200K/мес (токен-бот)</span>
+        <span>50K ежедн. · 400K ежемес. · база 3M+</span>
       </div>
     </div>
 
     <div class="job">
       <div class="job-header">
         <div>
-          <h3>Head of Marketing / Growth Marketing Lead</h3>
-          <p class="company">Forex Game App — Android</p>
+          <h3>Руководитель маркетинга / Рост</h3>
+          <p class="company">Forex Game App — Android-приложение</p>
         </div>
         <span class="date">12/2024 — 12/2025</span>
       </div>
       <div class="results">
         <span>700K → 1M+ установок</span>
-        <span>Органический рост</span>
+        <span>Устойчивый органический рост</span>
       </div>
     </div>
 
     <div class="job">
       <div class="job-header">
         <div>
-          <h3>Head of Content Marketing / Video Producer</h3>
-          <p class="company">CPA Lenta — affiliate media (B2B)</p>
+          <h3>Руководитель контент-маркетинга / Видеопродюсер</h3>
+          <p class="company">CPA Lenta — партнёрское медиа (B2B)</p>
         </div>
         <span class="date">2022 — н.в.</span>
       </div>
       <div class="results">
-        <span>6+ конференций/год</span>
+        <span>6+ конференций в год</span>
         <span>3K–5K просмотров на ролик</span>
       </div>
     </div>
@@ -112,14 +134,14 @@
     <div class="job">
       <div class="job-header">
         <div>
-          <h3>Freelance CMO Consultant</h3>
-          <p class="company">Fintech, Crypto, Anti-detect, Payments</p>
+          <h3>Внештатный консультант по маркетингу</h3>
+          <p class="company">Финтех, Крипто, Антидетект, Платежи</p>
         </div>
         <span class="date">2023 — н.в.</span>
       </div>
       <div class="results">
         <span>10+ проектов</span>
-        <span>4 ивент-проекта параллельно</span>
+        <span>4 мероприятия параллельно</span>
         <span>1500+ единиц мерча</span>
       </div>
     </div>
@@ -127,58 +149,42 @@
   </section>
 
   <section>
-    <h2>Навыки</h2>
+    <h2 id="skills-title">Навыки</h2>
     <div class="skills-grid">
-      <div class="skill-block">
-        <h4>Marketing Leadership</h4>
-        <p>GTM Strategy · Brand Management · B2B & B2C · Data-Driven · Crisis Management</p>
-      </div>
-      <div class="skill-block">
-        <h4>Growth & Performance</h4>
-        <p>Growth & Retention · Paid Ads · SEO/ASO · Funnel Analytics · A/B Testing</p>
-      </div>
-      <div class="skill-block">
-        <h4>PR & Media</h4>
-        <p>PR Strategy · Conference Coverage · C-level Networking · Influencer Relations</p>
-      </div>
-      <div class="skill-block">
-        <h4>Content & Video</h4>
-        <p>Full-cycle Video Production · Short & Long-form · 3D Animation · Motion Design</p>
-      </div>
-      <div class="skill-block">
-        <h4>AI & Operations</h4>
-        <p>AI-driven Content · AI for Research · Marketing Workflows · Process Building</p>
-      </div>
-      <div class="skill-block">
-        <h4>Team & Partners</h4>
-        <p>Team Building · Cross-functional · Strategic Partnerships · Vendor Management</p>
-      </div>
+      <div class="skill-block"><h4>Стратегия и управление</h4><p>Стратегия выхода на рынок · Управление брендом · B2B и B2C · Решения на основе данных · Кризисное управление</p></div>
+      <div class="skill-block"><h4>Рост и результаты</h4><p>Рост и удержание аудитории · Платная и органическая реклама · SEO/ASO · Аналитика воронок · A/B-тестирование</p></div>
+      <div class="skill-block"><h4>PR и медиа</h4><p>Стратегия PR · Работа со СМИ · Нетворкинг с топ-менеджментом · Работа с инфлюенсерами</p></div>
+      <div class="skill-block"><h4>Контент и видео</h4><p>Полный цикл видеопроизводства · Короткий и длинный форматы · 3D-анимация · Моушн-дизайн</p></div>
+      <div class="skill-block"><h4>ИИ и операционка</h4><p>Контент на базе ИИ · Исследования с помощью ИИ · Автоматизация маркетинга · Выстраивание процессов</p></div>
+      <div class="skill-block"><h4>Команда и партнёры</h4><p>Построение команды · Кросс-функциональное взаимодействие · Стратегические партнёрства · Управление подрядчиками</p></div>
     </div>
   </section>
 
   <section>
-    <h2>Образование</h2>
+    <h2 id="education-title">Образование</h2>
     <div class="edu-list">
-      <div class="edu"><span class="year">2025</span><span>MBA-Intensive — Школа генерального директора</span></div>
-      <div class="edu"><span class="year">2023</span><span>Стратегический маркетинг — Laba</span></div>
-      <div class="edu"><span class="year">2022</span><span>Бизнес-анализ — Laba</span></div>
-      <div class="edu"><span class="year">2019</span><span>Growth Hacking Marketing — Growth Hacking Academy, Москва</span></div>
+      <div class="edu"><span class="year">2025</span><span class="edu-text">MBA-Intensive — Школа генерального директора</span></div>
+      <div class="edu"><span class="year">2023</span><span class="edu-text">Стратегический маркетинг — Laba</span></div>
+      <div class="edu"><span class="year">2022</span><span class="edu-text">Бизнес-анализ — Laba</span></div>
+      <div class="edu"><span class="year">2019</span><span class="edu-text">Growth Hacking Marketing — Growth Hacking Academy, Москва</span></div>
     </div>
   </section>
 
   <section>
-    <h2>Языки</h2>
-    <div class="tags">
-      <span>Русский — Native</span>
-      <span>Белорусский — Native</span>
-      <span>English — B2</span>
-      <span>Italiano — Conversational</span>
+    <h2 id="languages-title">Языки</h2>
+    <div class="tags" id="languages-list">
+      <span>Русский — Родной</span>
+      <span>Белорусский — Родной</span>
+      <span>Английский — B2</span>
+      <span>Итальянский — Разговорный</span>
     </div>
   </section>
 
   <footer>
-    <p>tim4mkt.github.io · ex3all@gmail.com · <a href="https://t.me/Cpa_tim">@Cpa_tim</a></p>
+    <p id="footer-text">tim4mkt.github.io · ex3all@gmail.com · @Cpa_tim</p>
   </footer>
+
+  <script src="translations.js"></script>
 
 </body>
 </html>
