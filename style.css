@@ -306,27 +306,28 @@ footer a {
   body { padding: 24px 16px; }
   h1 { font-size: 1.6rem; }
   header { flex-direction: column; }
+
   .avatar {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  object-position: center top;
- }
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+  }
 
   .job-header { flex-direction: column; }
 
   .metrics {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 8px;
   }
 
   .metric {
-    aspect-ratio: 1;
+    aspect-ratio: 1 !important;
     padding: 6px;
   }
 
-  .num { font-size: 1rem; }
-  .label { font-size: 0.58rem; }
+  .num { font-size: 0.95rem; }
+  .label { font-size: 0.55rem; }
 }
 
